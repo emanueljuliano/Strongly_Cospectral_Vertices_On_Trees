@@ -1,6 +1,16 @@
 from sage.graphs.trees import TreeIterator
 
-fo = open("log24.txt", 'a')
+parser = argparse.ArgumentParser(description="""""")
+
+parser.add_argument("-n", dest="n", type=int, help="Number of Vertices to start the search")
+
+parser.add_argument("-r", dest="r", type=int, help="Radius of the search (from n to n+r-1)")
+
+parser.add_argument("-s", dest="s", type=int, help="Start the search from the s'th graph")
+
+args = parser.parse_args()
+
+fo = open(f"/data/log{args.n}.txt", 'a')
 
 def strongly_cospectral(X, n, cnt):
     phi_X = X.charpoly()
@@ -52,10 +62,8 @@ def strongly_cospectral(X, n, cnt):
 
 
 if __name__ == "__main__":
-
-	# Change here the values
-	n = 1
-	r = 10
+	n = args.n
+	r = args.r
 
 	for i in range(n, n+r):
 	    print(f"Trying graphs with {i} vertices")
@@ -63,8 +71,9 @@ if __name__ == "__main__":
 	    cnt = 0
 	    for t in TreeIterator(i):
 	        cnt+=1
-	        A = t.adjacency_matrix()
 	        
-	        #P = t.plot()
-	        #P.show()
+                if(cnt < args.s): continue
+                        
+                A = t.adjacency_matrix()
+	        
 	        strongly_cospectral(A, i, cnt)
