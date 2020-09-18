@@ -1,0 +1,20 @@
+Trying graphs with 64 vertices
+At graph 3, vertices 31 and 32 are strongly cospectral
+At graph 1112, vertices 30 and 31 are strongly cospectral
+At graph 1234, vertices 30 and 31 are strongly cospectral
+At graph 1356, vertices 30 and 31 are strongly cospectral
+At graph 1478, vertices 30 and 31 are strongly cospectral
+At graph 1600, vertices 30 and 31 are strongly cospectral
+At graph 1722, vertices 30 and 31 are strongly cospectral
+At graph 1844, vertices 30 and 31 are strongly cospectral
+At graph 1966, vertices 30 and 31 are strongly cospectral
+At graph 2088, vertices 30 and 31 are strongly cospectral
+At graph 2210, vertices 30 and 31 are strongly cospectral
+At graph 2332, vertices 30 and 31 are strongly cospectral
+At graph 2454, vertices 30 and 31 are strongly cospectral
+At graph 2576, vertices 30 and 31 are strongly cospectral
+At graph 2698, vertices 30 and 31 are strongly cospectral
+At graph 2760, vertices 30 and 31 are strongly cospectral
+At graph 8672, vertices 29 and 31 are strongly cospectral
+At graph 8672, vertices 30 and 32 are strongly cospectral
+At graph 8760, vertices 31 and 32 are strongly cospectral
