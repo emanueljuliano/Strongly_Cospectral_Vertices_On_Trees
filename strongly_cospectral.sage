@@ -1,4 +1,5 @@
 from sage.graphs.trees import TreeIterator
+import argparse
 
 parser = argparse.ArgumentParser(description="""""")
 
@@ -10,7 +11,7 @@ parser.add_argument("-s", dest="s", type=int, help="Start the search from the s'
 
 args = parser.parse_args()
 
-fo = open(f"/data/log{args.n}.txt", 'a')
+fo = open(f"data/log{args.n}.txt", 'a')
 
 def strongly_cospectral(X, n, cnt):
     phi_X = X.charpoly()
@@ -71,9 +72,8 @@ if __name__ == "__main__":
 	    cnt = 0
 	    for t in TreeIterator(i):
 	        cnt+=1
-	        
-                if(cnt < args.s): continue
+	        if(cnt < args.s): continue
                         
-                A = t.adjacency_matrix()
+	        A = t.adjacency_matrix()
 	        
 	        strongly_cospectral(A, i, cnt)
